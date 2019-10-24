@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Application de location de vélo sur la ville de Lyon">
+    <link rel="icon" href="img/icone_velo'v.png">
+    <script src="https://kit.fontawesome.com/055b01b2b2.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>MyVélo'v</title>
+</head>
+<body>
+    <header>
+        <div class="topbar-container">
+            <div class="logo">
+                <img src="img/myvelo'v.png" alt="Logo MyVélo'v">
+            </div>
+            <nav class="menu-nav">
+                <ul>
+                    <li><a href="#">Mode d'emploi</a></li>
+                    <li><a href="#">Carte des stations</a></li>
+                    <li><a href="#">Réservation</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="container">
+            <div id="carousel1">
+                <div class="item">
+                    <div class="item_image">
+                        <img src="img/slide1.jpg" alt="">
+                        <div class="item_body">
+                            <h2 class="item_title">
+                                Mon titre 1
+                            </h2>
+                            <p class="item_description">
+                                Ici une petite description pour tester le carousel
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item_image">
+                        <img src="img/slide1.jpg" alt="">
+                        <div class="item_body">
+                            <h2 class="item_title">
+                                Mon titre 2
+                            </h2>
+                            <p class="item_description">
+                                Ici une petite description pour tester le carousel
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item_image">
+                        <img src="img/slide1.jpg" alt="">
+                        <div class="item_body">
+                            <h2 class="item_title">
+                                Mon titre 3
+                            </h2>
+                            <p class="item_description">
+                                Ici une petite description pour tester le carousel
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item_image">
+                        <img src="img/slide1.jpg" alt="">
+                        <div class="item_body">
+                            <h2 class="item_title">
+                                Mon titre 4
+                            </h2>
+                            <p class="item_description">
+                                Ici une petite description pour tester le carousel
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item_image">
+                        <img src="img/slide1.jpg" alt="">
+                        <div class="item_body">
+                            <h2 class="item_title">
+                                Mon titre 5
+                            </h2>
+                            <p class="item_description">
+                                Ici une petite description pour tester le carousel
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="map-stations">
+        <h2>Carte des stations</h2>
+
+        <div id="contents">
+            <div id="map">Carte Google Maps</div>
+            <div id="booking"><h3 class="header-station">Station sélectionnée</h3>
+                <ul>
+                    <li>Identifiant de la station : <span id="nom"></span></li>
+                    <li>Adresse : <span id="adresse"></span></li>
+                    <li>Etat de la station : <span id="etat"></span></li>
+                    <li>Capacité de la station : <span id="capacite"></span></li>
+                    <li>Velo'v disponibles : <span id="place"></span></li>	
+                </ul>
+    
+                <div id="signature">
+                    <form id="form_nom_prenom" method="get">
+                        <p>
+                            <label for="nom">Nom :</label>
+                            <input type="text" name="nom" id="nom" placeholder="Nom" required>
+                        </p>
+                        <p>
+                            <label for="prenom">Prénom :</label>
+                            <input type="text" name="prenom" id="prenom" placeholder="Prénom" required>
+                        </p>
+                    </form>
+                    <div id="texteSignature">Signer ici</div>
+                    <canvas id="canvas">
+                        <p>Votre navigateur ne supporte pas Canvas, mettez votre navigateur à jour pour profiter de cette fonction.</p>
+                    </canvas>
+                    <button id="erase" class="btn">Effacer</button>
+    
+                    <button type="submit" id="send" class="btn">Réserver</button>
+                    <button type="submit" id="valid" class="btn">Valider</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="ajax.js"></script>
+    <script src="main.js"></script>
+    <script src="station.js"></script>
+    <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+    <script src="googlemap.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDjlRi8LTQ58gnuIDzK_WBVINJYZbI1Guc&callback=initMap" async defer></script>
+</body>
+</html>
